@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/support", "destination": "/support.html" }
+  ],
+  "functions": {
+    "api/ai/generate-image.ts": {
+      "maxDuration": 120
+    }
+  }
+}

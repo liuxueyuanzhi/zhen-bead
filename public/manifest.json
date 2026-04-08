@@ -1,0 +1,24 @@
+{
+  "name": "珍豆你玩",
+  "short_name": "珍豆你玩",
+  "description": "拼豆像素画设计工具，支持智能生成示意图、多色板、云端分享",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f1f5f9",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.jpg",
+      "sizes": "2048x2048",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo.jpg",
+      "sizes": "2048x2048",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    }
+  ]
+}

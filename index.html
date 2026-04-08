@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="珍豆你玩 - 拼豆像素画设计工具，支持智能生成示意图、多色板、云端分享">
+  <meta name="keywords" content="拼豆,像素画,Perler Beads,Hama Beads,像素设计,拼豆图纸">
+  <title>珍豆你玩</title>
+  <link rel="icon" type="image/jpeg" href="/logo.jpg">
+  <link rel="apple-touch-icon" type="image/jpeg" href="/logo.jpg">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-startup-image" href="/logo.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+    .safe-area-top { padding-top: env(safe-area-inset-top, 0px) !important; }
+    .safe-area-bottom { bottom: max(1rem, env(safe-area-inset-bottom, 1rem)); }
+    .fixed-safe-top { top: env(safe-area-inset-top, 0px) !important; }
+    * {
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+    html {
+      background-color: #ffffff;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f1f5f9;
+      overflow: hidden;
+    }
+    #root {
+      padding-top: env(safe-area-inset-top, 0px);
+    }
+    /*
+      移动端底栏：--app-mobile-tab-bar-height = 导出/分享等一行 + Home Indicator
+      --app-mobile-2d-bottom-chrome-height = 2D 时再多一行绘图快捷工具
+    */
+    :root {
+      /*
+        顶栏：#root 已有 safe-area padding，fixed 抽屉从视口算是 safe-top + 顶栏高度。
+        略放大余量，避免窄屏/大字体系下与顶栏重叠。
+      */
+      --app-mobile-header-offset: calc(env(safe-area-inset-top, 0px) + 4.75rem);
+      /* 底栏：多按钮 + 文案，实际高度可能高于理论值，预留略大 */
+      --app-mobile-tab-actions-height: 4.25rem;
+      --app-mobile-2d-tools-strip: 3.125rem;
+      --app-mobile-tab-bar-height: calc(var(--app-mobile-tab-actions-height) + env(safe-area-inset-bottom, 0px));
+      --app-mobile-2d-bottom-chrome-height: calc(
+        var(--app-mobile-2d-tools-strip) + var(--app-mobile-tab-actions-height) + env(safe-area-inset-bottom, 0px)
+      );
+    }
+    .bead-shadow {
+      box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06), 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+    }
+    .bg-dots {
+      background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    input[type="range"] {
+      height: 4px;
+      border-radius: 2px;
+    }
+    @media (max-width: 768px) {
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: thin;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
