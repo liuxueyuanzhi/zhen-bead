@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 
 interface LoginPageProps {
   onLogin: (token: string, role: 'admin' | 'user', username: string, extra?: any) => void;
-  onBack?: () => void;
 }
 
-export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onBack }) => {
+export const LoginPage: React.FC<LoginPageProps> = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -45,18 +44,6 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onLogin, onBack }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center p-4">
       <div className="bg-white rounded-3xl shadow-2xl w-full max-w-md p-8">
-        {onBack && (
-          <button
-            onClick={onBack}
-            className="flex items-center gap-2 text-slate-500 hover:text-slate-700 mb-6 transition-colors"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            返回
-          </button>
-        )}
-
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl mx-auto mb-4 flex items-center justify-center">
             <span className="text-3xl">🎨</span>

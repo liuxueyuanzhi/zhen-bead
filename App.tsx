@@ -11,7 +11,6 @@ import { ColorPicker } from './components/ColorPicker';
 import { ShortcutsPanel } from './components/ShortcutsPanel';
 import { HelpModal } from './components/HelpModal';
 import { OnboardingGuide } from './components/OnboardingGuide';
-import { AdminPanel } from './components/AdminPanel';
 import { VirtualJoystick } from './components/VirtualJoystick';
 import { LoginPage } from './components/LoginPage';
 import { UserManagement } from './components/UserManagement';
@@ -65,7 +64,6 @@ const App: React.FC = () => {
   const [showLogin, setShowLogin] = useState(!auth.token);
   const [route, setRoute] = useState(() => {
     const hash = window.location.hash;
-    if (hash === '#admin') return 'admin';
     if (hash === '#users') return 'users';
     return 'main';
   });
@@ -73,8 +71,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const onHashChange = () => {
       const hash = window.location.hash;
-      if (hash === '#admin') setRoute('admin');
-      else if (hash === '#users') setRoute('users');
+      if (hash === '#users') setRoute('users');
       else setRoute('main');
     };
     window.addEventListener('hashchange', onHashChange);
@@ -110,7 +107,11 @@ const App: React.FC = () => {
   }, []);
 
   if (showLogin && !auth.token) {
-    return <LoginPage onLogin={handleLogin} onBack={() => setShowLogin(false)} />;
+    return <LoginPage onLogin={handleLogin} />;
+  }
+
+  if (!auth.token) {
+    return <LoginPage onLogin={handleLogin} />;
   }
 
   if (route === 'users' && auth.role === 'admin') {
@@ -118,14 +119,6 @@ const App: React.FC = () => {
       <UserManagement 
         token={auth.token!} 
         onLogout={handleLogout} 
-      />
-    );
-  }
-
-  if (route === 'admin') {
-    return (
-      <AdminPanel 
-        onBack={() => { window.location.hash = ''; setRoute('main'); }} 
       />
     );
   }
@@ -150,20 +143,12 @@ const AppMainWithAuth: React.FC<AppMainWithAuthProps> = ({ auth, onLogout, setAu
         <div className="flex items-center gap-2">
           <span className="text-sm text-slate-600">当前用户：<strong>{auth.username}</strong></span>
           {auth.role === 'admin' && (
-            <>
-              <a 
-                href="#users" 
-                className="text-xs px-2 py-1 bg-indigo-100 text-indigo-600 rounded-lg font-bold hover:bg-indigo-200 transition-colors"
-              >
-                用户管理
-              </a>
-              <a 
-                href="#admin" 
-                className="text-xs px-2 py-1 bg-purple-100 text-purple-600 rounded-lg font-bold hover:bg-purple-200 transition-colors"
-              >
-                素材管理
-              </a>
-            </>
+            <a 
+              href="#users" 
+              className="text-xs px-2 py-1 bg-indigo-100 text-indigo-600 rounded-lg font-bold hover:bg-indigo-200 transition-colors"
+            >
+              用户管理
+            </a>
           )}
         </div>
         <button
