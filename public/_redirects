@@ -1,6 +1,0 @@
-/api/auth/user/login /.netlify/functions/auth/user/login 200
-/api/auth/user/ai-quota /.netlify/functions/auth/user/ai-quota 200
-/api/auth/user/change-password /.netlify/functions/auth/user/change-password 200
-/api/auth/admin/login /.netlify/functions/auth/admin/login 200
-/api/auth/admin/users /.netlify/functions/auth/admin/users 200
-/api/ai/generate-image /.netlify/functions/ai/generate-image 200
