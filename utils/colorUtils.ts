@@ -161,7 +161,7 @@ export async function generateExportImage(data: ExportImageData): Promise<HTMLCa
   
   ctx.fillStyle = '#64748B';
   ctx.font = '12px Arial';
-  ctx.fillText('pindou.danzaii.cn', logo ? 65 : 15, 48);
+  ctx.fillText('zhenbead.netlify.app', logo ? 65 : 15, 48);
   
   ctx.fillStyle = '#FFFFFF';
   ctx.fillRect(gridOffsetX, gridOffsetY, gridWidth * cellSize, gridHeight * cellSize);
@@ -492,7 +492,7 @@ export async function generateShareImage(data: ShareImageData): Promise<HTMLCanv
 
   ctx.fillStyle = '#cbd5e1';
   ctx.font = '18px "PingFang SC", "Microsoft YaHei", Arial';
-  ctx.fillText('pindou.danzaii.cn', W / 2, footerY + 45);
+  ctx.fillText('zhenbead.netlify.app', W / 2, footerY + 45);
 
   ctx.strokeStyle = '#e2e8f0';
   ctx.lineWidth = 1;
@@ -516,8 +516,8 @@ export function generateShareCaption(
 ✨ ${colorCount} 色 | ${gridWidth * gridHeight} 颗拼豆
 📐 尺寸：${gridWidth}×${gridHeight}
 
-🔗 在线设计工具：pindou.danzaii.cn
+🔗 在线设计工具：zhenbead.netlify.app
 支持 AI 生成、图片转换、多品牌色号
 
-#拼豆 #拼豆图纸 #像素画 #手工 #珍豆你玩 #perlerbeads`;
+#拼豆 #拼豆图纸 #像素画 #手工 #珍豆你玩`;
 }

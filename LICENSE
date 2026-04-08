@@ -88,7 +88,7 @@ iv. a notice that refers to the disclaimer of warranties;
 
 v. a URI or hyperlink to the Licensed Material to the extent reasonably practicable;
 
-B. indicate if You modified the Licensed Material and retain an indication of any previous modifications; and
+B. indicate if You modified the Licensed Material and retain an indication of any previous modifications;
 
 C. indicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.
 
@@ -101,9 +101,13 @@ b. NonCommercial.
 1. You may not exercise the Licensed Rights for any commercial purpose, including but not limited to:
 
 A. selling, licensing, or otherwise monetizing the Licensed Material or Adapted Material;
+
 B. using the Licensed Material in any product or service that is offered for sale or commercial use;
+
 C. distributing the Licensed Material in a way that directly or indirectly generates revenue;
+
 D. using the Licensed Material for advertising or promotional purposes;
+
 E. using the Licensed Material in a business context or as part of a commercial operation.
 
 4. Sui Generis Database Rights
@@ -112,7 +116,7 @@ Where the Licensed Rights include Sui Generis Database Rights that apply to Your
 
 a. for the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database for NonCommercial purposes only;
 
-b. if You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material; and
+b. if You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material;
 
 c. You must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.
 
@@ -130,7 +134,7 @@ a. This Public License applies for the term of the Copyright and Similar Rights 
 
 b. Where Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:
 
-1. automatically as of the date the violation is cured, provided this is cured within 30 days of Your discovery of the violation; or
+1. automatically as of the date the violation is cured, provided this is cured within 30 days of Your discovery of the violation;
 
 2. upon express reinstatement by the Licensor.
 
@@ -166,14 +170,18 @@ For more information, please visit: https://creativecommons.org/licenses/by-nc/4
 
 This project is licensed under CC BY-NC 4.0
 
-Copyright (c) 2025 DanZai
+Copyright (c) 2026 ZhenBead
 
 You are free to:
+
 - Share: copy and redistribute the material in any medium or format
+
 - Adapt: remix, transform, and build upon the material
 
 Under the following terms:
+
 - Attribution: You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+
 - NonCommercial: You may not use the material for commercial purposes.
 
 No additional restrictions: You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.

@@ -154,13 +154,13 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
             <div className="space-y-2 text-sm text-slate-600">
               <p>如果你有任何建议或发现问题，欢迎反馈给我！</p>
               <a 
-                href="mailto:danzai233@qq.com" 
+                href="mailto:shorelew@qq.com" 
                 className="inline-flex items-center gap-2 px-4 py-2 bg-white hover:bg-indigo-50 text-indigo-600 font-bold rounded-xl border-2 border-indigo-200 hover:border-indigo-400 transition-all"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                danzai233@qq.com
+                shorelew@qq.com
               </a>
               <p className="text-xs text-slate-400 mt-2">欢迎提供建议，让珍豆你玩变得更好！</p>
             </div>

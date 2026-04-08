@@ -13,7 +13,7 @@ const config: CapacitorConfig = {
     allowNavigation: [
       '*.upstash.io',
       '*.vercel.app',
-      'pindou.danzaii.cn',
+      'zhenbead.netlify.app',
     ],
   },
 };

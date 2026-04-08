@@ -135,18 +135,9 @@ App Store 要求提供隐私政策 URL。以下是需要声明的内容：
 - 应用不要求用户在客户端配置任何 AI 或图像生成 API 密钥
 - 分享链接数据存储在 Upstash Redis，7天后自动删除
 
-3. 第三方服务
-本应用使用以下第三方服务：
-- Upstash (https://upstash.com) - 分享数据存储
-- MongoDB Atlas (https://mongodb.com) - 素材广场数据
-- Vercel Analytics (https://vercel.com) - 匿名访问统计
-
-4. 儿童隐私
+3. 儿童隐私
 本应用不针对 13 岁以下儿童收集任何个人信息。
 
-5. 联系我们
-如有隐私相关问题，请通过 GitHub Issues 联系：
-https://github.com/DanZai233/PixelBead/issues
 ```
 
 ---
@@ -169,18 +160,3 @@ https://github.com/DanZai233/PixelBead/issues
 5. 颜色统计面板（展示拼豆数量清单）
 
 ---
-
-## 支持 URL（Support URL）
-
-- 在 App Store Connect 中填写：**https://pindou.danzaii.cn/support**
-- 部署后该地址会展示用户支持说明、常见问题与 GitHub Issues 反馈入口（见仓库内 `public/support.html` 与 `vercel.json` 的 `/support` 重写）
-
----
-
-## 审核注意事项
-
-1. **Guideline 4.2 (Minimum Functionality)**: 本应用是功能丰富的设计工具（画布编辑、智能生成、颜色系统、导出等），不是简单的网页包装
-2. **Guideline 3.1.1**: 智能生成由应用免费提供，用户无需通过应用内购买或自行购买第三方 API Key 解锁；服务端密钥由开发者配置
-3. **登录**: 本应用无需登录即可使用所有核心功能
-4. **中国区合规（Guideline 5）**: 应用与元数据中不包含 ChatGPT、OpenAI 等未获许可的境外生成式服务品牌；智能生成由开发者自有服务端提供
-5. **审核备注（Review Notes）**: 可说明「Support URL：https://pindou.danzaii.cn/support；智能生成为开发者服务端提供的免费功能，无用户侧 API Key；元数据已去除 OpenAI/ChatGPT 等表述」
