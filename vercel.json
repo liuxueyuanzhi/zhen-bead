@@ -5,8 +5,10 @@
     { "source": "/support", "destination": "/support.html" }
   ],
   "functions": {
-    "api/ai/generate-image.ts": {
-      "maxDuration": 120
+    "api/**/*.ts": {
+      "maxDuration": 120,
+      "memory": 1024,
+      "includeFiles": "lib/**"
     }
   }
 }
