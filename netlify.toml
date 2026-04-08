@@ -1,46 +1,10 @@
 [build]
   command = "npm run build"
   publish = "dist"
-  functions = "netlify/functions"
+  functions = "functions"
 
 [build.environment]
   NODE_VERSION = "18"
-
-[[redirects]]
-  from = "/api/auth/user/login"
-  to = "/.netlify/functions/auth/user/login"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/api/auth/user/ai-quota"
-  to = "/.netlify/functions/auth/user/ai-quota"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/api/auth/user/change-password"
-  to = "/.netlify/functions/auth/user/change-password"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/api/auth/admin/login"
-  to = "/.netlify/functions/auth/admin/login"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/api/auth/admin/users"
-  to = "/.netlify/functions/auth/admin/users"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/api/ai/generate-image"
-  to = "/.netlify/functions/ai/generate-image"
-  status = 200
-  force = true
 
 [[headers]]
   for = "/.netlify/functions/*"
