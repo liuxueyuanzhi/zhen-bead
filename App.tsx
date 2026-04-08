@@ -901,7 +901,7 @@ const AppMain: React.FC<AppMainProps> = ({ auth, setAuth }) => {
 
     if (auth.role === 'user' && auth.token) {
       try {
-        const quotaRes = await fetch('/api/auth/user/ai-quota', {
+        const quotaRes = await fetch('/.netlify/functions/auth/user/ai-quota', {
           method: 'POST',
           headers: { Authorization: `Bearer ${auth.token}` },
         });

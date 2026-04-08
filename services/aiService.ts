@@ -24,7 +24,7 @@ const resolveGenerateUrl = (): string => {
   if (apiBase) {
     return `${apiBase.replace(/\/$/, '')}/api/ai/generate-image`;
   }
-  return '/api/ai/generate-image';
+  return '/.netlify/functions/ai/generate-image';
 };
 
 const isLocalDevMode = (): boolean => {

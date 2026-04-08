@@ -31,7 +31,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({ token, onLogout 
 
   const fetchUsers = async () => {
     try {
-      const res = await fetch('/api/auth/admin/users', {
+      const res = await fetch('/.netlify/functions/auth/admin/users', {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -65,7 +65,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({ token, onLogout 
 
     setActionLoading(true);
     try {
-      const res = await fetch('/api/auth/admin/users', {
+      const res = await fetch('/.netlify/functions/auth/admin/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({ token, onLogout 
         updates.aiLimit = parseInt(editAiLimit);
       }
 
-      const res = await fetch('/api/auth/admin/users', {
+      const res = await fetch('/.netlify/functions/auth/admin/users', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({ token, onLogout 
 
     setActionLoading(true);
     try {
-      const res = await fetch('/api/auth/admin/users', {
+      const res = await fetch('/.netlify/functions/auth/admin/users', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -163,7 +163,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({ token, onLogout 
   const handleExtendExpiry = async (userId: string, days: number) => {
     setActionLoading(true);
     try {
-      const res = await fetch('/api/auth/admin/users', {
+      const res = await fetch('/.netlify/functions/auth/admin/users', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -188,7 +188,7 @@ export const UserManagement: React.FC<UserManagementProps> = ({ token, onLogout 
 
     setActionLoading(true);
     try {
-      const res = await fetch(`/api/auth/admin/users?id=${userId}`, {
+      const res = await fetch(`/.netlify/functions/auth/admin/users?id=${userId}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` },
       });
