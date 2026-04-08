@@ -2,7 +2,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { MongoClient, ObjectId } from 'mongodb';
 import crypto from 'crypto';
 
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = process.env.MONGODB_URI || '';
 const DB_NAME = 'pixelbead';
 const JWT_SECRET = process.env.JWT_SECRET || 'default-secret';
 
